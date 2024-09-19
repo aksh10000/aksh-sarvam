@@ -16,7 +16,7 @@ class human_transfer(BaseModel):
 def transfer_to_human(human_query)->str:
     """Returns a string whenever the user query indicates a genuine emergency requiring immediate human intervention, such as requests for urgent medical assistance, an ambulance, including suicidal statements or situations where there is a clear and imminent risk to health or safety. This includes explicit requests for human agents or assistance in critical scenarios. 
     Don't use this function when user query describe general symptoms."""
-    return f"Our customer agent will contact you soon"
+    return f"Our customer agent will contact you soon, sit tight and do not worry we will help you with your query 😊"
 
 class numbers(BaseModel):
     a: int = Field(description="first number")
