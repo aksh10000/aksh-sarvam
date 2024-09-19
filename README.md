@@ -1,4 +1,4 @@
-# Agent with Tool Calling support and RAG integration on FastAPI endpoints.
+## Agent with Tool Calling support and RAG integration on FastAPI endpoints.
 # Loom link : https://www.loom.com/share/cfbefab51ffb4a7fa0959e4f9afe07e3?sid=d1e92670-630f-434b-b708-b4600d4720f2
 This project involves this techstack:
 1. Streamlit: For frontend
@@ -12,13 +12,17 @@ This project involves this techstack:
 9. faiss: for dense retrieval
 10. ensemble retriever: for hybrid retrieval
 11. sarvam api endpoint: for Text to Speech
-# Some screenshots from the application:
+## Some screenshots from the application:
 # RAG tool calling implementation:
 ![image](https://github.com/user-attachments/assets/f70d3e74-fa8a-498c-8012-7c82eba1eadc)
 # Transfer to human being tool calling implementation:
 ![image](https://github.com/user-attachments/assets/2f76bb44-1347-4ae8-a2e4-707017ea0a47)
-# add two numbers tool implementation:
+# Add two numbers tool implementation:
 ![image](https://github.com/user-attachments/assets/2c68834e-d2a3-4fe3-9ab1-68765f085442)
-
+## Steps to replicate this on a local machine:
+Steps:
+1. Clone this repo using ssh or https(repo is private)
+2. Install the requirements.txt file
+`pip install -r requirements.txt`
 
 
