@@ -25,9 +25,10 @@ Steps:
 2. Install the requirements.txt file using `pip install -r requirements.txt`.
 3. Enter the file location of the pdf file in the `initialize_multiple_retrievers.py` file using `python initialize_multiple_retrievers.py`.
 4. Use tmux to run 3 different terminals on a single or on vscode open 3 different shells to run the following commands
-   (i) Type `uvicorn rag_api_endpoint:app --reload --port 8000` on the first terminal and press `Enter`
-   (ii) Type `uvicorn agent_api_endpoint:app --reload --port 8001` on the second terminal and press `Enter`
-   (iii) Type `streamlit run front_end.py --port 8501` on the third terminal and press `Enter`
+(i) Type `uvicorn rag_api_endpoint:app --reload --port 8000` on the first terminal and press `Enter`
+(ii) Type `uvicorn agent_api_endpoint:app --reload --port 8001` on the second terminal and press `Enter`
+(iii) Type `streamlit run front_end.py --port 8501` on the third terminal and press `Enter`
 5. Open the `http://localhost:8501/` on your browser and you should be able to utilize the application.
+
 
 
