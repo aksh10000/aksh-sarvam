@@ -1,5 +1,47 @@
 import streamlit as st
 import requests
+import json
+import base64
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+sarvam_api = os.getenv("SARVAM_API_KEY")
+def get_audio(text):
+    url = "https://api.sarvam.ai/text-to-speech"
+    
+    payload = {
+        "inputs": [text[:500]],
+        "target_language_code": "en-IN",
+        "speaker": "meera",
+        "pitch": 1,
+        "pace": 1,
+        "loudness": 1,
+        "speech_sample_rate": 16000,
+        "enable_preprocessing": True,
+        "model": "bulbul:v1"
+    }
+    headers = {
+        "api-subscription-key": sarvam_api,
+        "Content-Type": "application/json"
+    }
+    
+    response = requests.request("POST", url, json=payload, headers=headers)
+    
+    print(response.text)
+    # Assume 'response' contains the JSON string from the API
+    response_data = json.loads(response.text)
+    # Get the Base64 encoded audio data
+    # st.warning(response_data)
+    # print(response_data)
+    audio_base64 = response_data['audios'][0]
+    # Decode the Base64 string
+    audio_data = base64.b64decode(audio_base64)
+    # Write the binary audio data to a WAV file
+    file_name = 'output.wav'
+    with open(file_name, 'wb') as audio_file:
+        audio_file.write(audio_data)
+    return file_name
 
 def main():
     st.set_page_config(page_title="AI CHAT AGENT")
@@ -28,6 +70,13 @@ def main():
 
             st.markdown(f"**User**: {user_input}")
             st.markdown(f"**Assistant**: {api_response}")
+            file_name = get_audio(api_response)
+            audio_file = open(file_name, 'rb')
+            st.audio(audio_file)
+
+            
+
+            
     else:
         session_id = st.text_input("Enter your session id")
         if session_id:
