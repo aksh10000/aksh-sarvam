@@ -23,8 +23,9 @@ This project involves this techstack:
 Steps:
 1. Clone this repo using ssh or https(repo is private)
 2. Install the requirements.txt file using `pip install -r requirements.txt`.
-3. Enter the file location of the pdf file in `file_path` variable in the `initialize_multiple_retrievers.py` file first and run the file using `python initialize_multiple_retrievers.py`.
-4. Use tmux to run 3 different terminals on a single or on vscode open 3 different shells to run the following commands
+3. Save the `SARVAM_API_KEY` and `GOOGLE_API_KEY` in the environment `.env` file.
+4. Enter the file location of the pdf file in `file_path` variable in the `initialize_multiple_retrievers.py` file first and run the file using `python initialize_multiple_retrievers.py`.
+5. Use tmux to run 3 different terminals on a single or on vscode open 3 different shells to run the following commands
    1. Type `uvicorn rag_api_endpoint:app --reload --port 8000` on the first terminal and press `Enter`
    2. Type `uvicorn agent_api_endpoint:app --reload --port 8001` on the second terminal and press `Enter`
    3. Type `streamlit run front_end.py --port 8501` on the third terminal and press `Enter`
