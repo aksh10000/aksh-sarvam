@@ -19,6 +19,8 @@ This project involves this techstack:
 ![image](https://github.com/user-attachments/assets/2f76bb44-1347-4ae8-a2e4-707017ea0a47)
 ## Add two numbers tool implementation:
 ![image](https://github.com/user-attachments/assets/2c68834e-d2a3-4fe3-9ab1-68765f085442)
+## Sample interface:
+https://github.com/user-attachments/assets/ba8352ce-ff7f-4420-8430-3beb84819dc1
 # Steps to replicate this on a local machine:
 Steps:
 1. Clone this repo using ssh or https(repo is private)
